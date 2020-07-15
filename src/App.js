@@ -6,18 +6,19 @@ import Menu from "./components/Menu";
 import { Route, Switch, Link } from "react-router-dom";
 import Chartkick from "./components/Chartkick/Chartkick";
 import Draftjs from "./components/Draftjs/Draftjs";
+import FramerMotion from "./components/FramerMotion/FramerMotion";
 
 const navigation = [
   {
     menuTitle: "React Libraries",
     menuItems: [
+      { title: "Framer Motion", dest: "/framer" },
       { title: "React Router", dest: "/react-router" },
       { title: "Formik", dest: "/formik" },
       { title: "React Hook Form", dest: "/react-form" },
       { title: "Redux", dest: "/redux" },
       { title: "Chakra UI", dest: "/chakra" },
       { title: "Tailwind UI", dest: "/tailwind" },
-      { title: "Framer Motion", dest: "/framer" },
       { title: "ChartKick", dest: "/chartkick" },
       { title: "Recharts", dest: "/recharts" },
       { title: "React i18next", dest: "/react-i18next" },
@@ -65,10 +66,11 @@ function App() {
             <Route path="/" exact render={() => <h1>Home Page</h1>} />
             <Route path="/chartkick" component={Chartkick} />
             <Route path="/draftjs" component={Draftjs} />
+            <Route path="/framer" component={FramerMotion} />
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </Main>
-        <Footer>Nombre Apellido | www.tupagina.com</Footer>
+        <Footer>Gerard Altamirano | <a href="https://github.com/TheJarX" target="_blank">@TheJarX</a></Footer>
       </Layout>
     </>
   );
